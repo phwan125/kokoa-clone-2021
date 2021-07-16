@@ -1,0 +1,123 @@
+.recommended-friends {
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  margin: 25px 0px;
+  padding: 25px 0px;
+}
+.recommended-friends__title {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.recommended-friends span {
+  text-align: center;
+  margin: 110px 0px;
+  display: block;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 25px;
+}
+
+.open-chat__header span {
+  opacity: 0.5;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 0px;
+  margin: 5px 0px;
+}
+.open-post__title {
+  font-weight: 700;
+}
+
+.open-post__hashtags {
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+
+.open-post__members {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__members--count {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.open-post__members .divider {
+  width: 1px;
+  height: 13px;
+  margin: 0px 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.open-post__members--state {
+  color: deeppink;
+  font-size: 12px;
+}
+
+.open-post__column--img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.open-post__column--hearts {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+.open-post__column {
+  position: relative;
+}
+@keyframes heartAnimation {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(2);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+.open-post__column--hearts i {
+  font-size: 10px;
+  margin-right: 5px;
+}
+.open-post__column--hearts:hover i {
+  will-change: transform;
+  animation: heartAnimation 1s ease-in-out infinite;
+}
+
+.open-post__column--hearts span {
+  font-size: 10px;
+  font-weight: 600;
+}

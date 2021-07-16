@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>You Are Awesome!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      body {
+        border: 5px solid rgb(0, 198, 173);
+        margin-top: 30px;
+        width: 300px;
+        height: 530px;
+        position: relative;
+        padding: 40px 20px;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .title__text {
+        font-size: x-large;
+        width: 100%;
+        text-align: center;
+        font-weight: bolder;
+      }
+      .album {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .album i {
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgb(207, 207, 17);
+        color: white;
+      }
+      .album-column {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .album__title {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 10px;
+        line-height: 40px;
+      }
+      .buttons {
+        margin: 25px 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .buttons button {
+        background-color: white;
+        border-width: 3px 3px 5px 3px;
+      }
+      .buttons button:hover {
+        cursor: pointer;
+      }
+
+      .buttons__play {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .buttons__play--text {
+        display: block;
+        margin: 10px;
+        font-size: 20px;
+      }
+      .buttons__like {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .buttons__plus {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .song-list {
+        display: flex;
+        margin: 15px 0px;
+      }
+      .song-list__cover {
+        width: 40px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      .song-list__cover--first {
+        background-color: tomato;
+      }
+      .song-list__cover--second {
+        background-color: pink;
+      }
+      .song-list__cover--third {
+        background-color: blue;
+      }
+      .song-list__cover--forth {
+        background-color: teal;
+      }
+      .song-list__text {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+      .song-list__title {
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="title">
+      <div class="title__icon"><i class="fas fa-times"></i></div>
+      <h1 class="title__text">Playlist</h1>
+    </header>
+    <main>
+      <div class="album">
+        <i class="far fa-image fa-4x"></i>
+        <div class="album-column">
+          <span class="album__title">Random Love</span>
+          <span class="album__artist">by Divay Kapoor</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="buttons__play">
+          <i class="fas fa-caret-right fa-2x"></i>
+          <span class="buttons__play--text">play</span>
+        </button>
+        <button class="buttons__like">
+          <i class="far fa-heart fa-2x"></i>
+        </button>
+        <button class="buttons__plus"><i class="fas fa-plus fa-2x"></i></button>
+      </div>
+      <footer>
+        <div class="song-list">
+          <div class="song-list__cover song-list__cover--first"></div>
+          <div class="song-list__text">
+            <span class="song-list__title">Martagasti</span>
+            <span class="song-list__artist">Mohit chauhan</span>
+          </div>
+        </div>
+        <div class="song-list">
+          <div class="song-list__cover song-list__cover--second"></div>
+          <div class="song-list__text">
+            <span class="song-list__title">Attitude</span>
+            <span class="song-list__artist">Lewis OfMan Attitude</span>
+          </div>
+        </div>
+        <div class="song-list">
+          <div class="song-list__cover song-list__cover--third"></div>
+          <div class="song-list__text">
+            <span class="song-list__title">Try Everything</span>
+            <span class="song-list__artist">Shakira Zootopia</span>
+          </div>
+        </div>
+        <div class="song-list">
+          <div class="song-list__cover song-list__cover--forth"></div>
+          <div class="song-list__text">
+            <span class="song-list__title">Sunflower</span>
+            <span class="song-list__artist">Joseph Vincent Sunflower</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

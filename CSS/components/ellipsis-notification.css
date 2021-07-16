@@ -1,0 +1,12 @@
+.ellipsis-notification {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  display: flex;
+}
+.ellipsis-notification__cog {
+  position: absolute;
+  right: 17px;
+  top: 75px;
+}

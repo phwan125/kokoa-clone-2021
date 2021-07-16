@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@import "reset.css";
+@import "variables.css";
+
+/* screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chatting.css";
+
+/* components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/ellipsis-notification.css";
+@import "components/items-row.css";
+@import "components/alt-header.css";
+@import "components/mobile-screen.css";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 1000vh;
+  margin: 50px 0px;
+}
+
+.front-background {
+  background-color: var(--yellow);
+  text-align: center;
+  position: absolute;
+  padding: 100vh 100vh;
+  transition: 0.3s ease-in-out;
+}
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+/* 인트로 제작중 */
+/* .front-background:hover {
+  display: none;
+}
+
+.back-background {
+  position: relative;
+  height: 100px;
+  opacity: 0%;
+  transition: opacity 100% 1s ease-in-out;
+} */

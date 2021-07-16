@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>You Are Awesome!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        display: flex;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      body {
+        width: 400px;
+        height: 100vh;
+        position: relative;
+      }
+      header {
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        padding: 0px 20px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+        background-color: rgb(245, 213, 46);
+      }
+      .header__bar-icon {
+        width: 33%;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .header__title {
+        padding-bottom: 10px;
+        width: 33%;
+        font-size: 30px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+      }
+      .header__shop-icon {
+        width: 33%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .search {
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        width: 350px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 90px;
+        left: 26px;
+        box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1);
+      }
+      .search-box {
+        background-color: white;
+        border: none;
+      }
+      .search-box:focus {
+        outline: none;
+      }
+      .search-box::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
+      .search i {
+        padding-bottom: 3px;
+      }
+      .day-book__title,
+      .top__title,
+      .authors__title {
+        font-weight: 700;
+        font-size: 25px;
+      }
+      .day-book__column {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+      }
+      .day-book__img {
+        border-radius: 10px;
+        width: 150px;
+        height: 200px;
+        margin: 20px;
+        margin-top: 0;
+        margin-left: 0;
+      }
+      .day-book-rows {
+        display: flex;
+        flex-direction: row;
+      }
+      .day-book__row1 {
+        margin-bottom: 20px;
+      }
+      .day-book__text:first-child {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .day-book__text:nth-child(2) {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.3);
+      }
+      .day-book__row1 span {
+        display: block;
+        margin-bottom: 15px;
+      }
+      .day-book__star i {
+        color: rgb(245, 213, 46);
+      }
+      .day-book__star i:last-child {
+        color: rgba(0, 0, 0, 0.2);
+      }
+      .day-book__category {
+        display: flex;
+        flex-direction: row;
+      }
+      .day-book__category--text {
+        width: auto;
+        height: auto;
+        margin-right: 10px;
+        padding: 5px;
+        padding-bottom: 8px;
+        border-radius: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+      .day-book__buttons {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .day-book__buttons i {
+        background-color: rgb(245, 213, 46);
+        width: auto;
+        height: auto;
+        padding: 10px;
+        border-radius: 40%;
+      }
+      .day-book__buttons--booknow {
+        width: auto;
+        height: auto;
+        padding: 10px 25px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0);
+        color: white;
+      }
+
+      .top-books__colums {
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -ms-overflow-style: none;
+      }
+
+      .top-books__colums::-webkit-scrollbar {
+        display: none;
+      }
+
+      .top-books__colums img {
+        opacity: 0.2;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 80px;
+        height: 120px;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .top-books__colums img:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+
+      .top-books__list {
+        margin: 30px 30px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .top-books__stars i {
+        font-size: 10px;
+        color: rgb(245, 213, 46);
+      }
+      .top-books__stars > i:last-child {
+        color: rgba(0, 0, 0, 0.2);
+      }
+      .authors-column {
+        margin: 20px 0;
+        display: flex;
+      }
+      .authors__img {
+        width: 130px;
+        height: 200px;
+        border-radius: 15px;
+      }
+      .authors-row {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .authors-row__title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+      .authors-row__text {
+        margin-top: 20px;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header__bar-icon"><i class="fas fa-bars"></i></div>
+      <div class="header__title">library</div>
+      <div class="header__shop-icon"><i class="fas fa-shopping-bag"></i></div>
+    </header>
+    <div class="search">
+      <input class="search-box" type="text" placeholder="Search books..." />
+      <i class="fas fa-search"></i>
+    </div>
+    <main>
+      <div class="day-book">
+        <h1 class="day-book__title">Book of The day</h1>
+        <div class="day-book__column">
+          <img class="day-book__img" src="bookcover1.jpg" alt="" />
+          <div class="day-book__rows">
+            <div class="day-book__row1">
+              <span class="day-book__text">No Fixed Adobe</span>
+              <span class="day-book__text">Journey Through</span>
+              <div class="day-book__star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star last-star"></i>
+              </div>
+            </div>
+            <div class="day-book__row2">
+              <div class="day-book__category">
+                <div class="day-book__category--text"><span>Journey</span></div>
+                <div class="day-book__category--text">
+                  <span>Biography</span>
+                </div>
+              </div>
+            </div>
+            <div class="day-book__row3">
+              <div class="day-book__buttons">
+                <i class="fas fa-bookmark"></i>
+                <div class="day-book__buttons--booknow">
+                  <span>Book Now</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top">
+        <h1 class="top__title">Top Adventures</h1>
+        <div class="top-books__colums">
+          <div class="top-books__list">
+            <img src="bookcover1.jpg" alt="" class="top-books__img" />
+            <div class="top-books__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star last-star"></i>
+            </div>
+          </div>
+          <div class="top-books__list">
+            <img src="bookcover1.jpg" alt="" class="top-books__img" />
+            <div class="top-books__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star last-star"></i>
+            </div>
+          </div>
+          <div class="top-books__list">
+            <img src="bookcover1.jpg" alt="" class="top-books__img" />
+            <div class="top-books__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star last-star"></i>
+            </div>
+          </div>
+          <div class="top-books__list">
+            <img src="bookcover1.jpg" alt="" class="top-books__img" />
+            <div class="top-books__stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star last-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="authors">
+        <h1 class="authors__title">Popular authors</h1>
+        <div class="authors-column">
+          <img src="bookcover1.jpg" alt="" class="authors__img" />
+          <div class="authors-row">
+            <span class="authors-row__title"
+              >George Raymond Richard Martin</span
+            >
+            <span class="authors-row__text"
+              >Moderm American science fiction writer...</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
