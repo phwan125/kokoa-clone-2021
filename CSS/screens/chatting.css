@@ -110,7 +110,7 @@
 .reply {
   background-color: white;
   padding: 5px 15px;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   display: flex;
   box-sizing: border-box;
@@ -146,7 +146,7 @@
 }
 .reply:focus-within .reply-form input {
   width: 100vw;
-  transform: translateY(-80px) translateX(-80px);
+  transform: translateY(-70px) translateX(-40px);
 }
 .reply:focus-within {
   transform: translateY(80px);
